@@ -8,7 +8,7 @@
 <!-- Menu -->
 <nav id="menu">
 	<header class="major">
-		<h2>Navigation</h2>
+		<h2>Navigation_</h2>
 	</header>
 	<ul>
 		<li><a href="index.html">Accueil</a></li>
