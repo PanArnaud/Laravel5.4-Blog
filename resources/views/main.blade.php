@@ -15,7 +15,7 @@
 			<div id="sidebar">
 				<div class="inner">
 					@include('partials._menu')
-					@include('partials._recents')
+					@include('partials._random')
 					@include('partials._footer')
 				</div>
 			</div>
