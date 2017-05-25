@@ -12,7 +12,7 @@
 	</header>
 	<ul>
 		<li><a href="index.html">Accueil</a></li>
-		<li><a href="generic.html">Generic</a></li>
-		<li><a href="elements.html">Elements</a></li>
+		<li><a href="elements.html">A propos</a></li>
+		<li><a href="generic.html">Articles</a></li>
 	</ul>
 </nav>
