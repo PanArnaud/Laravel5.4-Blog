@@ -11,4 +11,4 @@
 	<ul class="actions">
 		<li><a href="#" class="button">More</a></li>
 	</ul>
-</section>
+</section> 
