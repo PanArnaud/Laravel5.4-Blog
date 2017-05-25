@@ -5,14 +5,14 @@
 	<form method="post" action="#">
 		<div class="row uniform">
 			<div class="6u 12u$(xsmall)">
-				<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
+				<input type="text" name="demo-name" id="demo-name" value="" placeholder="Nom" />
 			</div>
 			<div class="6u$ 12u$(xsmall)">
 				<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
 			</div>
 			<!-- Break -->
 			<div class="12u$">
-				<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+				<textarea name="demo-message" id="demo-message" placeholder="Entre votre message" rows="6"></textarea>
 			</div>
 			<!-- Break -->
 			<div class="12u$">
@@ -26,5 +26,5 @@
 </section>
 
 <footer id="footer">
-	<p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+	<p class="copyright">&copy; Arnaud Panapadéatchy</p>
 </footer>
