@@ -1,5 +1,7 @@
 @extends('main')
 
+@section('title', 'Accueil')
+
 @section('content')
 	<section id="banner">
 		<div class="content">

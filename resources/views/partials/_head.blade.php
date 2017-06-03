@@ -1,5 +1,5 @@
 <head>
-	<title>Title - Arnaud</title>
+	<title>Mon Site | @yield('title')</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<!--[if lte IE 8]><script src="{{ asset('js/ie/html5shiv.js') }}"></script><![endif]-->
