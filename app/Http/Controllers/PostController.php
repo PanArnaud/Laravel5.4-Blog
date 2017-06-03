@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Post;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -34,7 +35,28 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // Validate the data
+        $this->validate($request, array(
+            'title'         =>'required|max:255',
+            // 'slug'          => 'required|alpha_dash|min:5|max:255|unique:posts,slug',
+            // 'category_id'   => 'required|integer',
+            'body'          => 'required',
+            // 'featured_image'=> 'sometimes|image'
+        ));
+
+        // Store in the database
+        $post = new Post;
+        $post->title = $request->title;
+        // $post->slug = $request->slug;
+        // $post->category_id = $request->category_id;
+        $post->body = $request->body;
+        if(isset($request->online)) {
+            $post->online = $request->online;
+        }
+        $post->save();
+
+        // Redirect to the show route
+        return redirect()->route('posts.show', $post->id);
     }
 
     /**

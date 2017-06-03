@@ -4,7 +4,7 @@
 
 @section('content')
   <section>
-    {!! Form::open(['url' => 'posts.store']) !!}
+    {!! Form::open(['route' => 'posts.store']) !!}
       <div class="row uniform">
         <div class="12u$">
           {{ Form::text('title', null, array('placeholder' => 'Titre')) }}
