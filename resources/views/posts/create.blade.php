@@ -2,6 +2,10 @@
 
 @section('title', 'Administration | Créer un nouvel article')
 
+@section('stylesheets')
+  <link rel="stylesheet" href="{{ asset('css/parsley.css') }}">
+@endsection
+
 @section('content')
   <section>
     {!! Form::open(['route' => 'posts.store']) !!}
@@ -27,4 +31,8 @@
       </div>
     {!! Form::close() !!}
   </section>
+@endsection
+
+@section('javascripts')
+  <script type="text/javascript" src="{{ asset('js/parsley.min.js') }}"></script>
 @endsection
