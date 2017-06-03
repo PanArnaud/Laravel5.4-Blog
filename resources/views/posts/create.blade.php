@@ -8,13 +8,13 @@
 
 @section('content')
   <section>
-    {!! Form::open(['route' => 'posts.store']) !!}
+    {!! Form::open(['route' => 'posts.store', 'data-parsley-validate' => '']) !!}
       <div class="row uniform">
         <div class="12u$">
-          {{ Form::text('title', null, array('placeholder' => 'Titre')) }}
+          {{ Form::text('title', null, array('placeholder' => 'Titre', 'required' => '', 'maxlength' => '255')) }}
         </div>
         <div class="12u$">
-          {{ Form::textarea('body', null, array('placeholder' => 'Contenu')) }}
+          {{ Form::textarea('body', null, array('placeholder' => 'Contenu', 'required' => '')) }}
         </div>
         <div class="12u$">
         </div>
