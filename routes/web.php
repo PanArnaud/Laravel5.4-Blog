@@ -11,8 +11,5 @@
 |
 */
 
-Route::get('/', function () {
-    return view('pages.index');
-});
-
+Route::get('/', 'PageController@getIndex');
 Route::resource('posts', 'PostController');
