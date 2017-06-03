@@ -13,8 +13,15 @@
           {{ Form::textarea('body', null, array('placeholder' => 'Contenu')) }}
         </div>
         <div class="12u$">
+        </div>
+        <div class="12u$">
+
           <ul class="actions">
-            {{ Form::submit('Créer l\'article') }}
+            <li>
+              {{ Form::checkbox('online', 1, false, array('id' => "online")) }}
+              {{ Form::label('online', 'En ligne ?') }}
+            </li>
+            <li>{{ Form::submit('Créer l\'article') }}</li>
           </ul>
         </div>
       </div>
