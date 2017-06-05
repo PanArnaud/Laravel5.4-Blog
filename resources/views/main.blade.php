@@ -8,6 +8,7 @@
 			<div id="main">
 				<div class="inner">
 					@include('partials._header')
+					@include('partials._messages')
 					@yield('content')
 				</div>
 			</div>

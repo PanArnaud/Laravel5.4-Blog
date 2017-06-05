@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Session;
 use App\Post;
 use Illuminate\Http\Request;
 
@@ -50,10 +51,10 @@ class PostController extends Controller
         // $post->slug = $request->slug;
         // $post->category_id = $request->category_id;
         $post->body = $request->body;
-        if(isset($request->online)) {
-            $post->online = $request->online;
-        }
+        $post->online = isset($request->online) ? isset($request->online) : 0;
         $post->save();
+
+        Session::flash('success', 'L\'article à bien était enregistré!');
 
         // Redirect to the show route
         return redirect()->route('posts.show', $post->id);
@@ -67,7 +68,7 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('posts.show');
     }
 
     /**

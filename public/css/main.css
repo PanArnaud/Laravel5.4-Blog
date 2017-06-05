@@ -2509,6 +2509,16 @@
 		padding: 1.5em;
 	}
 
+	.box-success {
+		color: black;
+		background-color: #CCFFCC;
+	}
+
+	.box-error {
+		color: black;
+		background-color: #FF9999;
+	}
+
 		.box > :last-child,
 		.box > :last-child > :last-child,
 		.box > :last-child > :last-child > :last-child {
