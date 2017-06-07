@@ -2836,11 +2836,11 @@
 					}
 
 						ul.pagination li > .page.active:hover {
-							background-color: #f67878;
+							background-color: #5a99dd;
 						}
 
 						ul.pagination li > .page.active:active {
-							background-color: #f45c5c;
+							background-color: #3685db;
 						}
 
 				ul.pagination li:first-child {
@@ -3047,7 +3047,7 @@
 			input[type="button"].special:hover,
 			button.special:hover,
 			.button.special:hover {
-				background-color: #f67878;
+				background-color: #5a99dd;
 			}
 
 			input[type="submit"].special:active,
@@ -3055,7 +3055,7 @@
 			input[type="button"].special:active,
 			button.special:active,
 			.button.special:active {
-				background-color: #f45c5c;
+				background-color: #3685db;
 			}
 
 		input[type="submit"].disabled, input[type="submit"]:disabled,
