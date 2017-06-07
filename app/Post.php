@@ -9,11 +9,11 @@ class Post extends Model
 {
   public function getCreatedAtAttribute($date)
   {
-      return Date::parse($date)->format('j F Y');
+    return Date::parse($date)->format('j F Y');
   }
 
   public function getUpdatedAtAttribute($date)
   {
-      return Date::parse($date)->format('j F Y');
+    return Date::parse($date)->format('j F Y');
   }
 }
