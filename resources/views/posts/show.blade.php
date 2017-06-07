@@ -10,8 +10,12 @@
     </li>
     <li><strong>Création:</strong> <i> {{$post->getCreatedAtAttribute($post->created_at) }}</i></li>
     <li><strong>Modification:</strong> <i> {{$post->getUpdatedAtAttribute($post->created_at) }}</i></li>
-    <li><a href="#" class="button special small icon fa-pencil">Editer</a></li>
-    <li><a href="#" class="button small icon fa-trash">Supprimer</a></li>
+    <li>
+      {!! Html::linkRoute('posts.edit', 'Editer', array($post->id), array('class' => 'button special small icon fa-pencil')) !!}
+    </li>
+    <li>
+      {!! Html::linkRoute('posts.destroy', 'Supprimer', array($post->id), array('class' => 'button small icon fa-trash')) !!}
+    </li>
   </ul>
 
   <hr>
