@@ -30,6 +30,11 @@
         </div>
       </div>
     {!! Form::close() !!}
+    <ul class="actions">
+      <li>
+        <a class="button small" href="{{ route('posts.index') }}"><i class="fa fa-angle-double-left"></i> Retour</a>
+      </li>
+    </ul>
   </section>
 @endsection
 
