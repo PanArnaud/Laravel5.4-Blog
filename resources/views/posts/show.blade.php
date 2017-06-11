@@ -16,6 +16,9 @@
     <li>
       {!! Html::linkRoute('posts.destroy', 'Supprimer', array($post->id), array('class' => 'button small icon fa-trash')) !!}
     </li>
+    <li>
+      <a class="button small" href="{{ route('posts.index') }}"><i class="fa fa-angle-double-left"></i> Retour</a>
+    </li>
   </ul>
 
   <hr>
