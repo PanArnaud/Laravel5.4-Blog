@@ -9,7 +9,7 @@
        {{ $post->online == 1 ? 'En ligne' : 'Hors ligne' }}
     </li>
     <li><strong>Création:</strong> <i> {{ $post->getCreatedAtAttribute($post->created_at) }}</i></li>
-    <li><strong>Modification:</strong> <i> {{ $post->getUpdatedAtAttribute($post->created_at) }}</i></li>
+    <li><strong>Modification:</strong> <i> {{ $post->getUpdatedAtAttribute($post->updated_at) }}</i></li>
     <li>
       <a class="button small" href="{{ route('posts.index') }}"><i class="fa fa-angle-double-left"></i> Retour</a>
     </li>
