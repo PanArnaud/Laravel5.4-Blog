@@ -37,7 +37,6 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        // Validate the data
         $this->validate($request, array(
             'title'         =>'required|max:255',
             // 'slug'          => 'required|alpha_dash|min:5|max:255|unique:posts,slug',
@@ -46,7 +45,6 @@ class PostController extends Controller
             // 'featured_image'=> 'sometimes|image'
         ));
 
-        // Store in the database
         $post = new Post;
         $post->title = $request->title;
         // $post->slug = $request->slug;
@@ -55,9 +53,7 @@ class PostController extends Controller
         $post->online = isset($request->online) ? isset($request->online) : 0;
         $post->save();
 
-        Session::flash('success', 'L\'article à bien était enregistré!');
-
-        // Redirect to the show route
+        Session::flash('success', 'L\'article à bien était enregistré !');
         return redirect()->route('posts.show', $post->id);
     }
 
@@ -94,7 +90,24 @@ class PostController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, array(
+            'title'         =>'required|max:255',
+            // 'slug'          => 'required|alpha_dash|min:5|max:255|unique:posts,slug',
+            // 'category_id'   => 'required|integer',
+            'body'          => 'required',
+            // 'featured_image'=> 'sometimes|image'
+        ));
+
+        $post = Post::find($id);
+        $post->title = $request->input('title');
+        // $post->slug = $request->input('slug');
+        // $post->category_id = $request->category_id;
+        $post->body = $request->input('body');
+        $post->online = null != $request->input('online') ? 1 : 0;
+        $post->save();
+
+        Session::flash('success', 'L\'article à bien était enregistré !');
+        return redirect()->route('posts.show', $post->id);
     }
 
     /**
