@@ -21,7 +21,8 @@
             <td>
               @if(!$post->online)
                 <i class="fa fa-circle red" aria-hidden="true"></i>
-              @endif {{ $post->title }}</td>
+              @endif {{ $post->title }}
+            </td>
             <td>{{ substr(strip_tags($post->body), 0, 100) }}{{ strlen(strip_tags($post->body)) > 100 ? "..." : "" }}</td>
             <td>{{ $post->getCreatedAtAttribute($post->created_at) }}</td>
             <td>
