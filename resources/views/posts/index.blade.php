@@ -32,6 +32,6 @@
         @endforeach
       </tbody>
     </table>
-    {!! $posts->links(); !!}
+    {!! $posts->links('vendor.pagination.default'); !!}
   </div>
 @endsection
