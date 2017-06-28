@@ -14,7 +14,9 @@
       {!! Html::linkRoute('posts.edit', 'Editer', array($post->id), array('class' => 'button special small icon fa-pencil')) !!}
     </li>
     <li>
-      {!! Html::linkRoute('posts.destroy', 'Supprimer', array($post->id), array('class' => 'button small icon fa-trash')) !!}
+      {!! Form::open(['route' => ['posts.destroy', $post->id], 'method' => 'DELETE']) !!}
+          {{ Form::button('Supprimer', ['type' => 'submit', 'class' => 'button small icon fa-trash'] )  }}
+      {!! Form::close() !!}
     </li>
     <li>
       <a class="button small" href="{{ route('posts.index') }}"><i class="fa fa-angle-double-left"></i> Retour</a>

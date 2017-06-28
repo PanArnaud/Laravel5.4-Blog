@@ -106,7 +106,7 @@ class PostController extends Controller
         $post->online = null != $request->input('online') ? 1 : 0;
         $post->save();
 
-        Session::flash('success', 'L\'article à bien était enregistré !');
+        Session::flash('success', 'L\'article a bien été enregistré !');
         return redirect()->route('posts.show', $post->id);
     }
 
@@ -118,6 +118,10 @@ class PostController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $post = Post::find($id);
+        $post->delete();
+
+        Session::flash('success', 'L\'article a bien été supprimé !');
+        return redirect()->route('posts.index');
     }
 }
