@@ -9,8 +9,8 @@
     <table>
       <thead>
         <th width="5%">#</th>
-        <th width="10%">Titre</th>
-        <th width="55%">Contenu</th>
+        <th width="20%">Titre</th>
+        <th width="45%">Contenu</th>
         <th width="10%">Crée le</th>
         <th width="20%"></th>
       </thead>
