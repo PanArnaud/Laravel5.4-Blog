@@ -21,12 +21,14 @@
     <li>
       <a class="button small" href="{{ route('posts.index') }}"><i class="fa fa-angle-double-left"></i> Retour</a>
     </li>
+    <br>
+    <li><a href="{{ url($post->slug) }}">{{ url($post->slug) }}</a></li>
   </ul>
 
   <hr>
 
   <header class="main">
-    <h1><h1>{{ $post->title }}</h1></h1>
+    <h1>{{ $post->title }}</h1>
   </header>
 
   <p>{{ $post->body }}</p>

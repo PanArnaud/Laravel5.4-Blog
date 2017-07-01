@@ -39,7 +39,7 @@ class PostController extends Controller
     {
         $this->validate($request, array(
             'title'         =>'required|max:255',
-            // 'slug'          => 'required|alpha_dash|min:5|max:255|unique:posts,slug',
+            'slug'          => 'required|alpha_dash|min:5|max:255|unique:posts,slug',
             // 'category_id'   => 'required|integer',
             'body'          => 'required',
             // 'featured_image'=> 'sometimes|image'
@@ -47,7 +47,7 @@ class PostController extends Controller
 
         $post = new Post;
         $post->title = $request->title;
-        // $post->slug = $request->slug;
+        $post->slug = $request->slug;
         // $post->category_id = $request->category_id;
         $post->body = $request->body;
         $post->online = isset($request->online) ? isset($request->online) : 0;
@@ -92,7 +92,7 @@ class PostController extends Controller
     {
         $this->validate($request, array(
             'title'         =>'required|max:255',
-            // 'slug'          => 'required|alpha_dash|min:5|max:255|unique:posts,slug',
+            'slug'          => 'required|alpha_dash|min:5|max:255|unique:posts,slug',
             // 'category_id'   => 'required|integer',
             'body'          => 'required',
             // 'featured_image'=> 'sometimes|image'
@@ -100,7 +100,7 @@ class PostController extends Controller
 
         $post = Post::find($id);
         $post->title = $request->input('title');
-        // $post->slug = $request->input('slug');
+        $post->slug = $request->input('slug');
         // $post->category_id = $request->category_id;
         $post->body = $request->input('body');
         $post->online = null != $request->input('online') ? 1 : 0;

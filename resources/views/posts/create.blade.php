@@ -14,6 +14,9 @@
           {{ Form::text('title', null, array('placeholder' => 'Titre', 'required' => '', 'maxlength' => '255')) }}
         </div>
         <div class="12u$">
+          {{ Form::text('slug', null, array('placeholder' => 'Slug', 'minlength' => '5', 'maxlength' => '255')) }}
+        </div>
+        <div class="12u$">
           {{ Form::textarea('body', null, array('placeholder' => 'Contenu', 'required' => '')) }}
         </div>
         <div class="12u$">
